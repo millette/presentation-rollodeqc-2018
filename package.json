@@ -1,0 +1,13 @@
+{
+  "name": "prez",
+  "version": "0.0.0",
+  "main": "deck.mdx",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "mdx-deck": "^1.6.9"
+  },
+  "scripts": {
+    "build": "mdx-deck build deck.mdx",
+    "start": "mdx-deck deck.mdx"
+  }
+}
