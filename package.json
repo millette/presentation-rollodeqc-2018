@@ -3,11 +3,17 @@
   "version": "0.0.0",
   "main": "deck.mdx",
   "license": "AGPL-3.0",
+  "scripts": {
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "ss": "mdx-deck screenshot deck.mdx",
+    "dev": "mdx-deck deck.mdx --no-open",
+    "lint": "standard"
+  },
   "dependencies": {
     "mdx-deck": "^1.6.9"
   },
-  "scripts": {
-    "build": "mdx-deck build deck.mdx",
-    "start": "mdx-deck deck.mdx"
+  "devDependencies": {
+    "standard": "^11.0.1"
   }
 }
