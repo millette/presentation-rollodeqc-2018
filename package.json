@@ -13,9 +13,13 @@
     "build": "mdx-deck build deck.mdx && cp deck.mdx dist/deck.txt",
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
-    "dev": "mdx-deck deck.mdx --no-open"
+    "dev": "mdx-deck deck.mdx --no-open",
+    "surge": "npm run build && surge dist"
   },
   "dependencies": {
     "mdx-deck": "^1.6.9"
+  },
+  "devDependencies": {
+    "surge": "^0.20.1"
   }
 }
