@@ -13,13 +13,10 @@
     "build": "mdx-deck build deck.mdx",
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
-    "dev": "mdx-deck deck.mdx --no-open",
-    "lint": "standard"
+    "dev": "mdx-deck deck.mdx --no-open"
   },
   "dependencies": {
     "mdx-deck": "^1.6.9"
   },
-  "devDependencies": {
-    "standard": "^11.0.1"
-  }
+  "devDependencies": {}
 }
