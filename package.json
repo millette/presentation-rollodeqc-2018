@@ -10,13 +10,12 @@
     "url": "http://robin.millette.info"
   },
   "scripts": {
-    "build": "mdx-deck build deck.mdx",
+    "build": "mdx-deck build deck.mdx && cp deck.mdx dist/deck.txt",
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
     "dev": "mdx-deck deck.mdx --no-open"
   },
   "dependencies": {
     "mdx-deck": "^1.6.9"
-  },
-  "devDependencies": {}
+  }
 }
