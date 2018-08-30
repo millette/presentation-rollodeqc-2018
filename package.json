@@ -18,7 +18,11 @@
     "surge": "npm run build && surge dist rollo-lm-2018.surge.sh"
   },
   "dependencies": {
-    "mdx-deck": "^1.6.9"
+    "mdx-deck": "^1.6.9",
+    "react-vega": "^4.0.2",
+    "react-vega-lite": "^2.0.2",
+    "vega-lib": "^4.2.0",
+    "vega-lite": "^3.0.0-rc5"
   },
   "devDependencies": {
     "surge": "^0.20.1"
