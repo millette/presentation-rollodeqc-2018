@@ -28,11 +28,11 @@ class Barchart extends Component {
     }
 
     this.list = (
-      <ul style={{ fontSize: '1.5em' }}>
+      <ol style={{ textAlign: 'left', fontSize: '1.5em' }}>
         {this.barData.map(({ label, personnesImp, word }) => (
           <li key={label}>{label.slice(2)}: <b>{personnesImp}</b> {word}</li>
         ))}
-      </ul>
+      </ol>
     )
 
     this.state = {
