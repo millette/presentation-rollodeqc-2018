@@ -14,7 +14,8 @@
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
     "dev": "mdx-deck deck.mdx --no-open",
-    "surge": "npm run build && npm run pdf && surge dist rollo-lm-2018.surge.sh"
+    "surge:pdf": "npm run build && npm run pdf && surge dist rollo-lm-2018.surge.sh",
+    "surge": "npm run build && surge dist rollo-lm-2018.surge.sh"
   },
   "dependencies": {
     "mdx-deck": "^1.6.9"
