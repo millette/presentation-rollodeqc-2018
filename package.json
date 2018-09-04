@@ -10,6 +10,7 @@
     "url": "http://robin.millette.info"
   },
   "scripts": {
+    "lint": "standard",
     "build": "mdx-deck build deck.mdx && cp deck.mdx dist/deck.txt",
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
@@ -25,6 +26,7 @@
     "vega-lite": "^3.0.0-rc5"
   },
   "devDependencies": {
+    "standard": "^12.0.1",
     "surge": "^0.20.1"
   }
 }
