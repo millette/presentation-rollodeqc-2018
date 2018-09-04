@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "build": "mdx-deck build deck.mdx && cp deck.mdx dist/deck.txt",
+    "build": "mdx-deck build deck.mdx && cp deck.mdx dist/deck.txt && cp -a images dist/",
     "pdf": "mdx-deck pdf deck.mdx",
     "ss": "mdx-deck screenshot deck.mdx",
     "dev": "mdx-deck deck.mdx --no-open",
