@@ -21,8 +21,8 @@ class Barchart extends Component {
     this.barData = []
     let oy
     let personnes
-    while (oy = re.exec(props.children + ' ')) {
-      let [zzz, label, personnesImp, word] = oy
+    while ((oy = re.exec(props.children + ' '))) {
+      let [, label, personnesImp, word] = oy
       personnes = parseInt(personnesImp.replace(/\s/, ''), 10)
       this.barData.push({ label, personnes, personnesImp, word })
     }
@@ -48,7 +48,7 @@ class Barchart extends Component {
   render () {
     return (
       <div style={{ cursor: 'pointer' }} onClick={this.click}>
-        {this.state.graphic ? <VegaLite spec={spec} data={{values: this.barData}} /> : this.list}
+        {this.state.graphic ? <VegaLite spec={spec} data={{ values: this.barData }} /> : this.list}
       </div>
     )
   }
