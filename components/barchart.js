@@ -3,13 +3,39 @@ import React, { Component } from 'react'
 import VegaLite from 'react-vega-lite'
 
 const spec = {
-  width: 500,
-  height: 500,
+  width: 550,
+  height: 450,
+  config: {
+    autosize: 'pad',
+    axis: {
+      labelFontSize: 20,
+      titleFontSize: 20
+    },
+    legend: {
+      labelFontSize: 20,
+      titleFontSize: 20
+    }
+  },
   mark: 'bar',
   encoding: {
     color: { field: 'label', type: 'nominal' },
-    x: { field: 'label', type: 'nominal' },
-    y: { field: 'personnes', type: 'quantitative' }
+    x: {
+      field: 'label',
+      type: 'nominal',
+      sort: {
+        field: 'personnes'
+      },
+      axis: {
+        labelAngle: 45
+      }
+    },
+    y: {
+      field: 'personnes',
+      type: 'quantitative',
+      axis: {
+        titlePadding: 15
+      }
+    }
   }
 }
 
@@ -23,6 +49,7 @@ class Barchart extends Component {
     let personnes
     while ((oy = re.exec(props.children + ' '))) {
       let [, label, personnesImp, word] = oy
+      label = label.slice(3)
       personnes = parseInt(personnesImp.replace(/\s/, ''), 10)
       this.barData.push({ label, personnes, personnesImp, word })
     }
@@ -46,9 +73,14 @@ class Barchart extends Component {
   }
 
   render () {
+    const props = {
+      spec,
+      data: { values: this.barData }
+    }
+    // {this.state.graphic ? <VegaLite spec={spec} data={{ values: this.barData }} /> : this.list}
     return (
       <div style={{ cursor: 'pointer' }} onClick={this.click}>
-        {this.state.graphic ? <VegaLite spec={spec} data={{ values: this.barData }} /> : this.list}
+        {this.state.graphic ? <VegaLite { ...props } /> : this.list}
       </div>
     )
   }
