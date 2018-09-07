@@ -54,7 +54,6 @@ class Barchart extends Component {
       }
     }
 
-
     this.barData = []
     let oy
     let personnes
@@ -90,7 +89,7 @@ class Barchart extends Component {
     }
     return (
       <div style={{ cursor: 'pointer' }} onClick={this.click}>
-        {this.state.graphic ? <VegaLite { ...props } /> : this.list}
+        {this.state.graphic ? <VegaLite {...props} /> : this.list}
       </div>
     )
   }
