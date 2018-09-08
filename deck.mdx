@@ -146,7 +146,6 @@ Déconférence WikiSuite
 
 ---
 
-
 ## Langages
 
 <Barchart title='Langages'>
@@ -257,7 +256,7 @@ C’est sur le *roadmap*...
 
 * Gatsby n’est pas le premier
 * J’en ai essayé et écrit plusieurs
-* <https://staticsitegenerators.net/> en compte 458
+* [staticsitegenerators.net](https://staticsitegenerators.net/) en compte 458
 
 ---
 
@@ -265,6 +264,7 @@ C’est sur le *roadmap*...
 
 * Écrit en JavaScript (client et ligne de commande)
 * Utilise les outils NodeJS
+* npm ou yarn
 * Babel
 * Webpack
 
@@ -292,6 +292,53 @@ C’est sur le *roadmap*...
 * GNU/Linux, MacOS et Windows (<abbr title='votre kilométrage pourrait varier'>VKPV</abbr>)
 
 ---
+
+## Installer NodeJS et gestionnaire de versions
+
+---
+
+### Sur GNU/Linux (fonctionne aussi sur MacOS), j'utilise ```n```:
+
+```sh
+curl -L https://git.io/n-install | bash
+```
+
+---
+
+### Sur Windows, installer:
+
+<https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip>
+
+---
+
+## Installer NodeJS directement
+
+<https://nodejs.org/en/download/>
+
+---
+
+## À propos de NodeJS et npm
+
+Je n'utilise que GNU/Linux, je n'ai pas d'expérience
+avec les autres environnements.
+
+* npm: nodejs package manager
+* package: un ou des modules javascripts
+* yarn: outil de Facebook pour gérer les paquets npm
+
+---
+
+### Installation globale ou locale
+
+* En général, on utilise npm (ou yarn) pour installer les dépendances d'un projet, localement
+* On peut aussi utiliser npm globalement pour installer des outils à la ligne de commande, mais c'est plus rare
+* Quand on fait une installation globale, les fichiers iront dans un espace global de l'intallation nodeJS,
+  soit au niveau du système ou au niveau de l'utilisateur
+* C'est préférable que les installations dites globales se fassent au niveau de l'utilisateur
+* D'où la suggestion d'utiliser un gestionnaire de versions pour installer nodeJS
+
+---
+
 
 # Environnement Gatsby
 
