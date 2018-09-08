@@ -1,4 +1,4 @@
-import { Appear, Image } from 'mdx-deck'
+import { Notes, Appear, Image } from 'mdx-deck'
 import Barchart from 'components/barchart'
 
 # RoLLodeQc
@@ -330,15 +330,37 @@ avec les autres environnements.
 
 ### Installation globale ou locale
 
-* En général, on utilise npm (ou yarn) pour installer les dépendances d'un projet, localement
-* On peut aussi utiliser npm globalement pour installer des outils à la ligne de commande, mais c'est plus rare
-* Quand on fait une installation globale, les fichiers iront dans un espace global de l'intallation nodeJS,
-  soit au niveau du système ou au niveau de l'utilisateur
-* C'est préférable que les installations dites globales se fassent au niveau de l'utilisateur
-* D'où la suggestion d'utiliser un gestionnaire de versions pour installer nodeJS
+* npm: installer les dépendances d'un projet
+* npm --global: installer des outils à la ligne de commande
+* npm --global: global au niveau système (sudo) ou utilisateur
+* niveau utilisateur de préférence (au lieu d'utiliser sudo)
+* C'est pourquoi je suggère d'utiliser n ou nvm pour installer nodeJS
+
+<Notes>
+  <ul>
+    <li>En général, on utilise npm (ou yarn) pour installer les dépendances d'un projet, localement</li>
+    <li>On peut aussi utiliser npm globalement pour installer des outils à la ligne de commande, mais c'est plus rare</li>
+    <li>Quand on fait une installation globale, les fichiers iront dans un espace global de l'intallation nodeJS,
+      soit au niveau du système (sudo) ou au niveau de l'utilisateur</li>
+    <li>C'est préférable que les installations dites globales se fassent au niveau de l'utilisateur pour éviter d'avoir recours à sudo</li>
+    <li>D'où la suggestion d'utiliser un gestionnaire de versions pour installer nodeJS</li>
+  </ul>
+</Notes>
 
 ---
 
+## npm vs yarn
+
+* npm est en général livré avec nodeJS
+* il peut aussi est mis à jour séparément
+* ```npm install --global npm```
+* yarn est une alternative à npm avec ses propres commandes, mais le même registres de packages
+* ```npm install --global yarn``` n'est pas recommandé
+* voir plutôt [yarnpkg.com/fr/docs/install](https://yarnpkg.com/fr/docs/install)
+* les deux évoluent rapidement, difficile de choisir
+* il en existe d'autres: pnpm, etc.
+
+---
 
 # Environnement Gatsby
 
@@ -348,7 +370,20 @@ avec les autres environnements.
 
 ---
 
+## Versions de Gatsby
+
+* Version 1.9.277 [gatsbyjs.org](https://www.gatsbyjs.org/)
+* Version 2.0.0-rc.14 [next.gatsbyjs.org](https://next.gatsbyjs.org/)
+
+On va se pencher sur la version 2, utilisée par le RoLLodeQc.
+
+---
+
 ## Starters
+
+*boilerplate*
+
+[next.gatsbyjs.org/docs/gatsby-starters](https://next.gatsbyjs.org/docs/gatsby-starters/)
 
 * CMS
 * Blogue
