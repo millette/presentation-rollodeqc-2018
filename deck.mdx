@@ -381,21 +381,111 @@ On va se pencher sur la version 2, utilisée par le RoLLodeQc.
 
 ## Starters
 
-*boilerplate*
+Point de départ pour démarrer un nouveau site
 
 [next.gatsbyjs.org/docs/gatsby-starters](https://next.gatsbyjs.org/docs/gatsby-starters/)
 
 * CMS
 * Blogue
 * eCommerce
+* etc.
 
 ---
 
 ## Greffons
 
+*Plugins*
+
 * Sources
 * Transformateurs
 * Génériques
+
+---
+
+### Implémentation d'un greffon
+
+Gatsby offre un API riche pour construire des greffons à différents stages de la construction d'un site.
+
+---
+
+### Greffon source
+
+Un greffon source charge les données par différents moyens:
+
+* WordPress
+* MongoDB
+* API web
+* Système de fichiers
+* etc.
+
+---
+
+### Greffon transformateur
+
+[EN] *A transformer plugin converts data from one format (e.g. CSV, YAML) to a JavaScript object*
+
+---
+
+### Autres greffons
+
+* Un greffon peut construire sur un autre greffon et sa nomenclature devrait le refléter
+* D'autres greffons génériques sont possibles
+
+---
+
+## GraphQL
+
+Langage de requêtes structurées publié par Facebook en 2015 comme alternatives aux API REST.
+
+Utilisé dans Gatsby pour uniformiser toutes les sources de données:
+
+* Système de fichiers (JSON, markdown, images, etc.)
+* GitHub
+* WordPress
+* etc.
+
+---
+
+### Requête GraphQL
+
+```
+query {
+  viewer {
+    name
+    login
+    location
+    email
+    websiteUrl
+    bio
+  }
+}
+```
+
+---
+
+### Réponse GraphQL
+
+```js
+{
+  "data": {
+    "viewer": {
+      "name": "Robin Millette",
+      "login": "millette",
+      "location": "Montréal, Québec, Canada",
+      "email": "robin@millette.info",
+      "websiteUrl": "http://robin.millette.info/",
+      "bio": "Je contribue au @RoLLodeQc, le bottin des développeurs du Québec. Saviez-vous que nous sommes près de 16,000 inscrits sur GitHub?"
+    }
+  }
+}
+```
+
+---
+
+### GHraphql
+
+Dans le cadre du RoLLodeQc, j'ai écrit le script ghraphql pour faire
+les requêtes à GitHub puisque ce dernier limite, selon la complexité, le nombre de résultats par requêtes.
 
 ---
 
