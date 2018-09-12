@@ -1,5 +1,5 @@
 import { Notes, Appear, Image } from 'mdx-deck'
-import Barchart from 'components/barchart'
+import Barchart from './components/barchart'
 
 # RoLLodeQc
 ## Bottin des Développeurs du Québec
@@ -41,7 +41,7 @@ Déconférence WikiSuite
 * [Statistiques](#15)
 * [JAMstack](#27)
 * [Gatsby](#29)
-* [Contribuer](#39)
+* [Contribuer](#55)
 
 ---
 
@@ -224,11 +224,11 @@ C’est sur le *roadmap*...
 
 # JAMstack
 
-> Architecture moderne de développement web basé sur:
+## Architecture moderne de développement web
 
-* le JavaScript côté client,
-* des API réutilisables
-* un *markup* pré-construit
+* JavaScript côté client,
+* API réutilisables
+* *Markup* pré-construit
 
 [jamstack.org](https://jamstack.org/)
 
@@ -297,7 +297,7 @@ C’est sur le *roadmap*...
 
 ---
 
-### Sur GNU/Linux (fonctionne aussi sur MacOS), j'utilise ```n```:
+### Sur GNU/Linux (fonctionne aussi sur MacOS), j’utilise ```n```:
 
 ```sh
 curl -L https://git.io/n-install | bash
@@ -317,33 +317,35 @@ curl -L https://git.io/n-install | bash
 
 ---
 
-## À propos de NodeJS et npm
-
-Je n'utilise que GNU/Linux, je n'ai pas d'expérience
-avec les autres environnements.
+## NodeJS et npm
 
 * npm: nodejs package manager
 * package: un ou des modules javascripts
 * yarn: outil de Facebook pour gérer les paquets npm
 
+<Notes>
+Je n’utilise que GNU/Linux, je n’ai pas d’expérience
+avec les autres environnements.
+</Notes>
+
 ---
 
 ### Installation globale ou locale
 
-* npm: installer les dépendances d'un projet
+* npm: installer les dépendances d’un projet
 * npm --global: installer des outils à la ligne de commande
 * npm --global: global au niveau système (sudo) ou utilisateur
-* niveau utilisateur de préférence (au lieu d'utiliser sudo)
-* C'est pourquoi je suggère d'utiliser n ou nvm pour installer nodeJS
+* niveau utilisateur de préférence (au lieu d’utiliser sudo)
+* C’est pourquoi je suggère d’utiliser n ou nvm pour installer nodeJS
 
 <Notes>
   <ul>
-    <li>En général, on utilise npm (ou yarn) pour installer les dépendances d'un projet, localement</li>
-    <li>On peut aussi utiliser npm globalement pour installer des outils à la ligne de commande, mais c'est plus rare</li>
-    <li>Quand on fait une installation globale, les fichiers iront dans un espace global de l'intallation nodeJS,
-      soit au niveau du système (sudo) ou au niveau de l'utilisateur</li>
-    <li>C'est préférable que les installations dites globales se fassent au niveau de l'utilisateur pour éviter d'avoir recours à sudo</li>
-    <li>D'où la suggestion d'utiliser un gestionnaire de versions pour installer nodeJS</li>
+    <li>En général, on utilise npm (ou yarn) pour installer les dépendances d’un projet, localement</li>
+    <li>On peut aussi utiliser npm globalement pour installer des outils à la ligne de commande, mais c’est plus rare</li>
+    <li>Quand on fait une installation globale, les fichiers iront dans un espace global de l’intallation nodeJS,
+      soit au niveau du système (sudo) ou au niveau de l’utilisateur</li>
+    <li>C’est préférable que les installations dites globales se fassent au niveau de l’utilisateur pour éviter d’avoir recours à sudo</li>
+    <li>D’où la suggestion d’utiliser un gestionnaire de versions pour installer nodeJS</li>
   </ul>
 </Notes>
 
@@ -355,10 +357,10 @@ avec les autres environnements.
 * il peut aussi est mis à jour séparément
 * ```npm install --global npm```
 * yarn est une alternative à npm avec ses propres commandes, mais le même registres de packages
-* ```npm install --global yarn``` n'est pas recommandé
+* ```npm install --global yarn``` n’est pas recommandé
 * voir plutôt [yarnpkg.com/fr/docs/install](https://yarnpkg.com/fr/docs/install)
 * les deux évoluent rapidement, difficile de choisir
-* il en existe d'autres: pnpm, etc.
+* il en existe d’autres: pnpm, etc.
 
 ---
 
@@ -402,9 +404,16 @@ Point de départ pour démarrer un nouveau site
 
 ---
 
-### Implémentation d'un greffon
+### Implémentation d’un greffon
 
-Gatsby offre un API riche pour construire des greffons à différents stages de la construction d'un site.
+* Fonctions client
+* Fonctions SSR
+* Fonctions NodeJS
+
+<Notes>
+Gatsby offre un API riche pour construire des greffons à différents stages
+de la construction d’un site.
+</Notes>
 
 ---
 
@@ -422,14 +431,23 @@ Un greffon source charge les données par différents moyens:
 
 ### Greffon transformateur
 
-[EN] *A transformer plugin converts data from one format (e.g. CSV, YAML) to a JavaScript object*
+Converti en object JavaScript des données telles que:
+
+* CSV
+* JSON
+* YAML
+
+<Notes>
+Un greffon transformateur converti les données d’un format (CSV, YAML, etc.)
+en objet JavaScript.
+</Notes>
 
 ---
 
 ### Autres greffons
 
 * Un greffon peut construire sur un autre greffon et sa nomenclature devrait le refléter
-* D'autres greffons génériques sont possibles
+* D’autres greffons génériques sont possibles
 
 ---
 
@@ -484,16 +502,35 @@ query {
 
 ### GHraphql
 
-Dans le cadre du RoLLodeQc, j'ai écrit le script ghraphql pour faire
-les requêtes à GitHub puisque ce dernier limite, selon la complexité, le nombre de résultats par requêtes.
+* Script pour mettre à jour les données
+* Gère les multiples requêtes nécessaires
+* Obéit aux quotas de GitHub
+* S’utilise aussi indépendemment du bottin
+
+<Notes>
+<p>Dans le cadre du RoLLodeQc, j’ai écrit le script ghraphql pour faire
+les requêtes à GitHub puisque ce dernier limite, selon la complexité,
+le nombre de résultats par requête.</p>
+<p>Le script exporte ses données dans un fichier de son choix.</p>
+</Notes>
 
 ---
 
 ## Composantes React
 
+* Toutes les composantes React sont à votre disposition
+* Applications hybrides statique/dynamique
+
 ---
 
 # Contribuer
+
+<ul style={{ textAlign: 'left', fontSize: '1.5em' }}>
+  <Appear>
+    <li>Le projet vous intéresse?</li>
+    <li>Vous pouvez contribuer de multiples façons.</li>
+  </Appear>
+</ul>
 
 ---
 
@@ -551,5 +588,9 @@ les requêtes à GitHub puisque ce dernier limite, selon la complexité, le nomb
 * <https://twitter.com/rollodeqc>
 * <https://www.gatsbyjs.org>
 * <https://github.com/millette>
-* [gatsby-starter-location-github](https://github.com/millette/gatsby-starter-location-github) <small>(github)</small>
-* [ghraphql](https://github.com/millette/ghraphql) <small>(github)</small>
+* [gatsby-starter-location-github](https://github.com/millette/gatsby-starter-location-github) <small>(sur github)</small>
+* [ghraphql](https://github.com/millette/ghraphql) <small>(sur github)</small>
+
+---
+
+# Fin des *slides*
