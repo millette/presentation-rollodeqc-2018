@@ -3877,9 +3877,9 @@ mdurl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
-mdx-deck@^1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-1.7.3.tgz#5404d261250bf0c56ee3b80274b48ad5cd432512"
+mdx-deck@^1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-1.7.4.tgz#403d57c0876f393c5f23fb0886b0ecd9b15e28cf"
   dependencies:
     "@compositor/webfont" "^1.0.39"
     "@mdx-js/mdx" "^0.15.0"

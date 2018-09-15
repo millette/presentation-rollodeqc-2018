@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "react": "^16.5.1",
-    "mdx-deck": "^1.7.3",
+    "mdx-deck": "^1.7.4",
     "react-vega": "^4.0.2",
     "react-vega-lite": "^2.0.2",
     "vega-lib": "^4.2.0",
