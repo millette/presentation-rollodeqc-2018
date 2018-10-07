@@ -1,5 +1,5 @@
-# Présentation du RoLLodeQc 2018
-> Montréal Linux-Meetup, 4 septembre 2018
+# Présentation du RoLLodeQc et Gatsby 2018
+> JS-Montréal, 9 octobre 2018
 
 ## Scripts
 
