@@ -23,7 +23,7 @@
     "react": "^16.5.2",
     "react-vega": "^4.0.2",
     "react-vega-lite": "^2.0.2",
-    "vega-lib": "^4.2.0",
+    "vega-lib": "^4.3.0",
     "vega-lite": "^3.0.0-rc6"
   },
   "devDependencies": {
